@@ -1,0 +1,30 @@
+#!/bin/bash
+# Program:
+#       start OAI-MME
+# History:
+# 2017/12/25	ver.1
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
+#init
+sudo apt-get update && sudo apt-get install -y nmap
+
+#wait for HSS up --> open or filtered
+while :
+do
+	Result=`nmap -p 5001 $server_private | grep open`
+    if [ "X$Result" = "X" ]; then
+        echo "wait for HSS"
+    else
+        echo "HSS is alread up"
+        break
+    fi
+    echo "\n still in loop and sleep 1 sec ~"
+    sleep 1
+done
+
+#run MME
+echo "\n start mme ~"
+screen -d -m -S client iperf -c $server_private -t 48000000
+
+exit 0

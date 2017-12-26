@@ -1,2 +1,4 @@
+#!/bin/bash
 
-ip route | grep 192.168.200.6
+result=`ip route | grep 192.168.200.6'
+echo "print $result"

@@ -15,9 +15,6 @@ sed 's/ubuntu/hss/' hosts > /tmp/hosts
 cp hss.conf /usr/local/etc/oai
 cp hss_fd.conf /usr/local/etc/oai/freeDiameter
 cp acl.conf /usr/local/etc/oai/freeDiameter
-cp oai_db.sql /tmp
-cp create_db.sh /tmp
+cp HSS.service /etc/systemd/system
 #./create_db.sh
-#/root/openair-cn/SCRIPTS/run_hss
-
-
+#service HSS start

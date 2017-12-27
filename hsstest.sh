@@ -9,11 +9,11 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 " > aa2
 
-cp hss.conf /usr/local/etc/oai
-cp hss_fd.conf /usr/local/etc/oai/freeDiameter
-cp acl.conf /usr/local/etc/oai/freeDiameter
-cp oai_db.sql /tmp
-cp create_db.sh /tmp
+sudo cp hss.conf /usr/local/etc/oai
+sudo cp hss_fd.conf /usr/local/etc/oai/freeDiameter
+sudo cp acl.conf /usr/local/etc/oai/freeDiameter
+sudo cp oai_db.sql /tmp
+sudo cp create_db.sh /tmp
 ./create_db.sh
 /root/openair-cn/SCRIPTS/run_hss
 

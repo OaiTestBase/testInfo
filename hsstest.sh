@@ -1,21 +1,26 @@
 #!/bin/sh
 
-sudo su
-#change host name
-cp /etc/hostname hostname
-cp /etc/hostname /etc/hostname_tmp
-echo 'hss' > /etc/hostname
+#sudo su
 
 #change hosts 
-cp /etc/hosts hosts
-cp /etc/hosts /etc/hosts_tmp
-sed 's/ubuntu/hss/' hosts > /etc/hosts
+sudo cp /etc/hosts hosts
+sudo cp /etc/hosts /etc/hosts_tmp
+sudo sed 's/ubuntu/hss/' hosts > /etc/hosts
+
+echo "bbbb"
 
 #change host name without reboot
 sudo hostname hss
 
-#sudo cp hss.conf /usr/local/etc/oai
-#sudo cp hss_fd.conf /usr/local/etc/oai/freeDiameter
+echo "aaaa"
+#change host name
+sudo cp /etc/hostname hostname
+sudo cp /etc/hostname /etc/hostname_tmp
+sudo echo 'hss' > /etc/hostname
+
+echo "cccc"
+sudo cp hss.conf /usr/local/etc/oai
+sudo cp hss_fd.conf /usr/local/etc/oai/freeDiameter
 #sudo cp acl.conf /usr/local/etc/oai/freeDiameter
 #sudo cp HSS.service /etc/systemd/system
 #sudo ./create_db.sh

@@ -7,7 +7,7 @@ sudo sed 's/ubuntu/hss/' hostname > /etc/hostname
 #change hosts 
 sudo cp /etc/hosts hosts
 sudo mv /etc/hosts /etc/hosts_tmp
-sudo sed 's/ubuntu/hss/' hosts > /tmp/hosts
+sudo sed 's/ubuntu/hss/' hosts > /etc/hosts
 
 #change host name without reboot
 sudo hostname hss

@@ -1,13 +1,15 @@
 #!/bin/sh
+sudo su
 #change host name
-sudo cp /etc/hostname hostname
-sudo mv /etc/hostname /etc/hostname_tmp
-sudo sed 's/ubuntu/hss/' hostname > /etc/hostname
+cp /etc/hostname hostname
+mv /etc/hostname /etc/hostname_tmp
+sed 's/ubuntu/hss/' hostname > /etc/hostname
 
 #change hosts 
-sudo cp /etc/hosts hosts
-sudo mv /etc/hosts /etc/hosts_tmp
-sudo sed 's/ubuntu/hss/' hosts > /etc/hosts
+cp /etc/hosts hosts
+mv /etc/hosts /etc/hosts_tmp
+sed 's/ubuntu/hss/' hosts > /etc/hosts
+exit
 
 #change host name without reboot
 sudo hostname hss

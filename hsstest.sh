@@ -16,5 +16,5 @@ sudo cp hss.conf /usr/local/etc/oai
 sudo cp hss_fd.conf /usr/local/etc/oai/freeDiameter
 sudo cp acl.conf /usr/local/etc/oai/freeDiameter
 sudo cp HSS.service /etc/systemd/system
-./create_db.sh
-service HSS start
+sudo ./create_db.sh
+sudo service HSS start

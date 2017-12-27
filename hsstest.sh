@@ -5,7 +5,7 @@ sudo su
 #change host name
 cp /etc/hostname hostname
 mv /etc/hostname /etc/hostname_tmp
-sed 's/ubuntu/hss/' hostname > /etc/hostname
+echo 'hss' > /etc/hostname
 
 #change hosts 
 cp /etc/hosts hosts

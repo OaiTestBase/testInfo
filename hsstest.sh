@@ -5,7 +5,7 @@
 #change hosts 
 sudo cp /etc/hosts hosts
 sudo cp /etc/hosts /etc/hosts_tmp
-sudo sed 's/ubuntu/hss/' hosts > /etc/hosts
+sudo sed -i 's/ubuntu/hss/' hosts > /etc/hosts
 
 echo "bbbb"
 

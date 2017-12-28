@@ -22,3 +22,10 @@ sed -i "s/__MME_S1_C_IP__/${S11}/" mme.conf
 #S11 interface
 sed -i "s/__MME_S1_C_INTERFACE__/${S11Interface}/" mme.conf
  
+ #SPGW ip
+sed -i "s/SPGW_PRIVATE_IP/${SPGW_S11}/" mme.conf
+
+#mod mme_fd.conf
+#HSS ip
+sed -i "s/HSS_PRIVATE_IP/${S1-MME}/" mme.conf
+

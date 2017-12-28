@@ -1,3 +1,5 @@
 #!/bin/sh
-sudo echo "hss ip ="$hss_Hss > ipHSS.txt
-sudo echo "spgw ip ="$spgw_S11 > ipspgw.txt
+screen -d -m -S HSS ping $hss_Hss
+screen -d -m -S SPGW ping $hss_Hss
+echo "hss ip ="$hss_Hss > ipHSS.txt
+echo "spgw ip ="$spgw_S11 > ipspgw.txt

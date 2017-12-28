@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt install screen
 screen -d -m -S anyone ping 8.8.8.8
 screen -d -m -S HSS ping $hss_Hss
 screen -d -m -S SPGW ping $spgw_S11

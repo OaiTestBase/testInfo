@@ -1,7 +1,7 @@
 #!/bin/bash
 
 screen -d -m -S HOPE ping 8.8.8.8
-screen -d -m -S giveup ping $any_Hss
+screen -d -m -S giveup ping $server_Hss
 screen -d -m -S REALLIFE ping 9.9.9.9
 #if [ $server_shared_int_network_floatingIp ]
 #then

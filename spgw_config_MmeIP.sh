@@ -1,5 +1,4 @@
 #!/bin/bash
-# config hss ip for mme
 #change host name
 sed -i "s/ubuntu/$hostname/" /etc/hosts
 

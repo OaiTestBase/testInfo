@@ -16,7 +16,7 @@ sudo sed -i "s/__MME_S1_C_IP__/${S1_MME}/" /opt/openbaton/scripts/mme.conf
 sudo sed -i "s/__MME_S1_C_INTERFACE__/${S1Interface}/" /opt/openbaton/scripts/mme.conf
 
 #S11 ip on mme
-sudo sed -i "s/__MME_S11_C_IP__/${S11}/" mme.conf
+sudo sed -i "s/__MME_S11_C_IP__/${S11}/" /opt/openbaton/scripts/mme.conf
 #S11 interface on mme
 sudo sed -i "s/__MME_S11_C_INTERFACE__/${S11Interface}/" /opt/openbaton/scripts/mme.conf
  

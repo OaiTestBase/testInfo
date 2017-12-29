@@ -9,6 +9,8 @@ spgw_S11="10.1.1.35"
 S1Interface=ifconfig | grep -B1 "inet addr:${S1_MME}" | awk '$1!="inet" && $1!="--" {print $1}'
 S11Interface=ifconfig | grep -B1 "inet addr:${S11}" | awk '$1!="inet" && $1!="--" {print $1}'
 
+echo "s1 intf = ${S1Interface}"
+echo "s11 intf = ${S11Interface}"
 #mod mme.conf
 #S1 ip on mme
 sudo sed -i "s/__MME_S1_C_IP__/${S1_MME}/" mme.conf
@@ -16,9 +18,9 @@ sudo sed -i "s/__MME_S1_C_IP__/${S1_MME}/" mme.conf
 sudo sed -i "s/__MME_S1_C_INTERFACE__/${S1Interface}/" mme.conf
 
 #S11 ip on mme
-sudo sed -i "s/__MME_S1_C_IP__/${S11}/" mme.conf
+sudo sed -i "s/__MME_S11_C_IP__/${S11}/" mme.conf
 #S11 interface on mme
-sudo sed -i "s/__MME_S1_C_INTERFACE__/${S11Interface}/" mme.conf
+sudo sed -i "s/__MME_S11_C_INTERFACE__/${S11Interface}/" mme.conf
  
 #SPGW ip on spgw
 sudo sed -i "s/SPGW_PRIVATE_IP/${spgw_S11}/" mme.conf

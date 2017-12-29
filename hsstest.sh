@@ -14,7 +14,6 @@ sudo hostname hss
 #change host name
 sudo cp /etc/hostname /etc/hostname_tmp
 ORGHNAME=`cat /etc/hostname`
-echo "sed -i 's/$ORGHNAME/hss/' /etc/hostname" > mod_hostname.sh
 sudo sh mod_hostname.sh
 
 sudo cp hss.conf /usr/local/etc/oai

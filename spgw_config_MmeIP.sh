@@ -11,14 +11,14 @@ echo "s1 intf = ${S1Interface}"
 echo "s11 intf = ${S11Interface}"
 #mod mme.conf
 #S1 ip on mme
-sudo sed -i "s/__MME_S1_C_IP__/${S1_MME}/" mme.conf
+sudo sed -i "s/__MME_S1_C_IP__/${S1_MME}/" /opt/openbaton/scripts/mme.conf
 #S1 interface on mme
-sudo sed -i "s/__MME_S1_C_INTERFACE__/${S1Interface}/" mme.conf
+sudo sed -i "s/__MME_S1_C_INTERFACE__/${S1Interface}/" /opt/openbaton/scripts/mme.conf
 
 #S11 ip on mme
 sudo sed -i "s/__MME_S11_C_IP__/${S11}/" mme.conf
 #S11 interface on mme
-sudo sed -i "s/__MME_S11_C_INTERFACE__/${S11Interface}/" mme.conf
+sudo sed -i "s/__MME_S11_C_INTERFACE__/${S11Interface}/" /opt/openbaton/scripts/mme.conf
  
 #SPGW ip on spgw
-sudo sed -i "s/SPGW_PRIVATE_IP/${spgw_S11}/" mme.conf
+sudo sed -i "s/SPGW_PRIVATE_IP/${spgw_S11}/" /opt/openbaton/scripts/mme.conf

@@ -1,6 +1,6 @@
 #!/bin/bash
 # config hss ip for mme
-#test code
+#change host name
 sed -i "s/ubuntu/$hostname/" /etc/hosts
 
 #get interface for s11/s1

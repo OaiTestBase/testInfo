@@ -12,5 +12,5 @@ sudo cp /opt/openbaton/scripts/hss.conf /usr/local/etc/oai
 sudo cp /opt/openbaton/scripts/hss_fd.conf /usr/local/etc/oai/freeDiameter
 sudo cp /opt/openbaton/scripts/acl.conf /usr/local/etc/oai/freeDiameter
 sudo cp /opt/openbaton/scripts/HSS.service /etc/systemd/system
-sudo sh create_db.sh
+sudo sh /opt/openbaton/scripts/create_db.sh
 sudo service HSS start

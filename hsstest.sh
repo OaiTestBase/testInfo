@@ -1,15 +1,12 @@
 #!/bin/sh
 
 #change host name
-sed -i "s/ubuntu/$hostname/" /etc/hosts
-sed -i 's/$hostname/hss/' /etc/hosts
-hostname hss
-
-#change host name
-sudo cp /etc/hostname /etc/hostname_tmp
+#sed -i "s/ubuntu/$hostname/" /etc/hosts
+#sed -i 's/$hostname/hss/' /etc/hosts
 ORGHNAME=`cat /etc/hostname`
-echo "sed -i 's/$ORGHNAME/hss/' /etc/hostname" > mod_hostname.sh
-sudo sh mod_hostname.sh
+sed -i "s/$ORGHNAME/hss/" /etc/hosts
+sed -i "s/$ORGHNAME/hss/" /etc/hostname
+hostname hss
 
 sudo cp /opt/openbaton/scripts/hss.conf /usr/local/etc/oai
 sudo cp /opt/openbaton/scripts/hss_fd.conf /usr/local/etc/oai/freeDiameter

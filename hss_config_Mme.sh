@@ -11,6 +11,7 @@ sed -i "s/$ORGHNAME/nano/" /etc/hostname
 hostname nano
 
 #start MME service
+echo "start" > /opt/openbaton/scripts/mme_YOYO.txt
 while :
 do
     ResultForHss3868=`nmap -p 3868 ${hss_Hss} | grep open`
@@ -21,9 +22,9 @@ do
         echo "HSS is alread up"
         break
     fi
-    echo "\n still in loop and sleep 1 sec ~"
+    echo "\n still in loop and sleep 1 sec ~" >>/opt/openbaton/scripts/mme_YOYO.txt 
     sleep 1
 done
-echo "done" > /opt/openbaton/scripts/mme_YOYO.txt
+echo "done" >>/opt/openbaton/scripts/mme_YOYO.txt
 
 #sudo service MME start

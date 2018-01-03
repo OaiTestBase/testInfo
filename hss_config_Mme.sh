@@ -5,6 +5,7 @@
 sudo sed -i "s/__HSS_PRIVATE_IP__/${hss_Hss}/" /opt/openbaton/scripts/mme_fd.conf
 
 #change host name
+ORGHNAME=`cat /etc/hostname`
 sed -i "s/$ORGHNAME/nano/" /etc/hosts
 sed -i "s/$ORGHNAME/nano/" /etc/hostname
 hostname nano

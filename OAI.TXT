@@ -181,11 +181,11 @@
             {
               "connection_point":[
                 {
+                  "floatingIp":"random",
                   "virtual_link_reference":"SGi",
                   "interfaceId":0
                 },
                 {
-                  "floatingIp":"random",
                   "virtual_link_reference":"S1_U",
                   "interfaceId":1
                 },

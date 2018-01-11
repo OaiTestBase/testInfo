@@ -181,6 +181,7 @@
             {
               "connection_point":[
                 {
+                  "floatingIp":"random",
                   "virtual_link_reference":"SGi",
                   "interfaceId":0
                 },

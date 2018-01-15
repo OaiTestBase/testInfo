@@ -1,0 +1,4 @@
+sudo apt install xorg openbox
+sudo cp .Xauthority /root
+sudo apt install -y wireshark
+sudo wireshark&

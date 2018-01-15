@@ -4,6 +4,9 @@
   "version":"1.0",
   "vld":[
     {
+      "name":"public"      
+    },
+    {
       "name":"S11"      
     },
     {
@@ -24,7 +27,7 @@
   ],
   "vnfd":[
     {
-      "name":"MME",
+      "name":"iperf-client",
       "vendor":"FOKUS",
       "version":"1.0",
       "lifecycle_event":[
@@ -85,7 +88,7 @@
           "flavour_key":"m1.small"
         }
       ],
-      "type":"MME",
+      "type":"client",
       "endpoint":"generic",
       "vnfPackageLocation":"https://github.com/OaiTestBase/testInfo.git"
     },
@@ -200,7 +203,7 @@
         "name":"hss-dev"
       },
       "target":{
-        "name":"MME"
+        "name":"iperf-client"
       },
       "parameters":[
         "Hss"
@@ -211,7 +214,7 @@
         "name":"spgw-dev"
       },
       "target":{
-        "name":"MME"
+        "name":"iperf-client"
       },
       "parameters":[
         "S11"

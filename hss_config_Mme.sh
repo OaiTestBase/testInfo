@@ -29,4 +29,4 @@ do
     sleep 1
 done
 
-sudo service MME start
+#sudo service MME start

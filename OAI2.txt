@@ -34,8 +34,8 @@
         {
           "event":"CONFIGURE",
           "lifecycle_events":[
-            "spgw_config_MmeIP.sh",
-            "hss_config_Mme.sh"
+            "spgw_config_MmeIP2.sh",
+            "hss_config_Mme2.sh"
           ]
         },
         {
@@ -100,7 +100,7 @@
         {
           "event":"INSTANTIATE",
           "lifecycle_events":[
-            "hsstest.sh"
+            "hsstest2.sh"
           ]
         }
       ],
@@ -152,7 +152,7 @@
         {
           "event":"INSTANTIATE",
           "lifecycle_events":[
-            "spgwtest.sh"
+            "spgwtest2.sh"
           ]
         }
       ],

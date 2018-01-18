@@ -13,7 +13,7 @@ S11Interface=`ifconfig | grep -B1 "inet addr:${S11}" | awk '$1!="inet" && $1!="-
 
 #config files
 sudo sed -i "s/__SPGW_SGi_INTERFACE__/${SGiInterface}/" /opt/openbaton/scripts/spgw.conf
-sudo sed -i "s/__SPGW_S1U_IP__/${S1_U}/" /opt/openbaton/scripts/spgw.conf
+sudo sed -i "s/__SPGW_S1U_IP__/${public}/" /opt/openbaton/scripts/spgw.conf
 sudo sed -i "s/__SPGW_S1U_INTERFACE__/${S1_UInterface}/" /opt/openbaton/scripts/spgw.conf
 sudo sed -i "s/__SPGW_S11_IP__/${S11}/" /opt/openbaton/scripts/spgw.conf
 sudo sed -i "s/__SPGW_S11_INTERFACE__/${S11Interface}/" /opt/openbaton/scripts/spgw.conf

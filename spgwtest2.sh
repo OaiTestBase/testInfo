@@ -24,4 +24,4 @@ sudo cp /opt/openbaton/scripts/spgw.conf /usr/local/etc/oai
 sudo cp /opt/openbaton/scripts/SPGW.service /etc/systemd/system
 
 #run spgw
-#sudo service SPGW start
+sudo service SPGW start

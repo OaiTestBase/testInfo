@@ -3,12 +3,12 @@
 ## OS
 * ubuntu 16.04
 
-## install curl
+## pre install 
 * sudo apt-get install curl
 
 ## install OpenBatonb
-* install: sh <(curl -s http://get.openbaton.org/bootstrap) release
-* step:
+* install Open Baton: sh <(curl -s http://get.openbaton.org/bootstrap) release
+* install step:
  * 1. 選擇Open Baton NFVO版本，推薦5.1.1 for ubuntu 16.04
  * 2. 選擇RabbitMQ broker IP，此IP必須是VIM中VM能夠PING通的位置
  * 3. 選擇RabbitMQ broker PORT，用預設值即可(15672)

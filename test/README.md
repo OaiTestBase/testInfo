@@ -46,9 +46,30 @@ URL: https://github.com/OaiTestBase/NFV-Orchestration-Demo-using-OAI-EPC/blob/ma
 >Login dashboard and go to NS Descriptors，then click on Action -> Launch -> Launch
 
 5. check OAI VM status(on Open Baton ):
->Login dashboard  and go to Orchestrate NS -> NS Records, then find your NSR.<br/> If the NFVO finished their work the deployed NSR will change to ACTIVE state.
+>Login dashboard and go to Orchestrate NS -> NS Records, then find your NSR.<br/> If the NFVO finished their work the deployed NSR will change to ACTIVE state.
 
-6. Start eNB
+6. Install eNB (on your pc/X310):
+Ref: https://hackmd.io/AwNgZmCGDMDGBMBaAnPA7MxAWewBGikeWIiYIIkw1AjACbQZA===#
+
+7. Config eNB (on your pc/X310):
+>Config your eNB config file:
+~~~
+    mme_ip_address      = ( { ipv4       = "mme ipv4";
+                              ipv6       = "mme ipv6";
+                              active     = "yes";
+                              preference = "ipv4";
+                            }
+                          );
+    NETWORK_INTERFACES :
+    {
+        ENB_INTERFACE_NAME_FOR_S1_MME            = "your interface";
+        ENB_IPV4_ADDRESS_FOR_S1_MME              = "your IP/24";
+
+        ENB_INTERFACE_NAME_FOR_S1U               = ""your interface";
+        ENB_IPV4_ADDRESS_FOR_S1U                 = "your IP/24";
+        ENB_PORT_FOR_S1U                         = 2152; # Spec 2152
+    };
+~~~
 
 
 

@@ -42,11 +42,14 @@ URL: https://github.com/OaiTestBase/NFV-Orchestration-Demo-using-OAI-EPC/blob/ma
  > Login dashboard and go to Catalogue -> NS Descriptors and click on On Board NSD -> Upload JSON.<br/>
  put your jason on Insert Your Json field
 
-4. start OAI (on Open Baton ):
+4. Start OAI EPC (on Open Baton ):
 >Login dashboard and go to NS Descriptors，then click on Action -> Launch -> Launch
 
 5. check OAI VM status(on Open Baton ):
 >Login dashboard  and go to Orchestrate NS -> NS Records, then find your NSR.<br/> If the NFVO finished their work the deployed NSR will change to ACTIVE state.
+
+6. Start eNB
+
 
 
 

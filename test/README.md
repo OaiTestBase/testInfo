@@ -74,7 +74,7 @@ Ref: https://hackmd.io/AwNgZmCGDMDGBMBaAnPA7MxAWewBGikeWIiYIIkw1AjACbQZA===#
 ~~~
 9. Reboot your PC:
 10. Start eNB
->sudo niusrprio_pcie start
+>sudo niusrprio_pcie start<br/>
 >./start_enb.sh
 
 

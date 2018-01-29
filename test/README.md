@@ -37,7 +37,7 @@ EX: openstack image create --disk-format qcow2 --container-format bare --public 
 > Login dashboard and go to network -> networks and click create network to create Hss and S11 networks.<br/>
 ref: https://www.youtube.com/watch?v=cIdCjNSZNrg
 
-3. Config your Network Services Descriptor (on Open Baton ): <br/> You can use the following jason code by changing the values to your needs.<br/> If your OpenStack has S11 and Hss networks, then you dont need to change any values.<br/>
+3. Config your Network Services Descriptor (on Open Baton ): <br/> You can use the following jason code by changing the values to your needs.<br/> If your OpenStack has S11 and Hss networks, then you dont have to change any values.<br/>
 URL: https://github.com/OaiTestBase/NFV-Orchestration-Demo-using-OAI-EPC/blob/master/OpenBaton/OAI.txt
  > Login dashboard and go to Catalogue -> NS Descriptors and click on On Board NSD -> Upload JSON.<br/>
  put your jason on Insert Your Json field

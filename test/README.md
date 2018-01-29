@@ -72,9 +72,7 @@ Ref: https://hackmd.io/AwNgZmCGDMDGBMBaAnPA7MxAWewBGikeWIiYIIkw1AjACbQZA===#
         ENB_PORT_FOR_S1U                         = 2152; # Spec 2152
     };
 ~~~
-
 9. Reboot your PC:
-
 10. Start eNB
 >sudo niusrprio_pcie start
 >./start_enb.sh

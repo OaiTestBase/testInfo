@@ -50,7 +50,7 @@ URL: https://github.com/OaiTestBase/NFV-Orchestration-Demo-using-OAI-EPC/blob/ma
 
 6.Start X310 power and connect your USRP
 
-7. Install eNB (on your pc/X310):
+7. Install eNB (on your pc/X310):<br/>
 Ref: https://hackmd.io/AwNgZmCGDMDGBMBaAnPA7MxAWewBGikeWIiYIIkw1AjACbQZA===#
 
 8. Config eNB (on your pc/X310):

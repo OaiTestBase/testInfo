@@ -53,4 +53,4 @@
 * 完成OpenBaton Tutorial: Dummy Network Service Record --> http://openbaton.github.io/documentation/dummy-NSR/
 * 若缺少Test vim driver，到 https://github.com/openbaton/test-plugin 中安裝driver，然後重開機
 * 若執行完上述步驟，看Network Service Records List of NSRs中，若State為ACTIVE 即為成功
-* ![](http://140.96.102.187:8080/redmine/attachments/download/1532/openactive.PNG)
+

@@ -48,7 +48,7 @@ def ssh(cmd, host, user, password):
 
 def main():#argv=sys.argv[1:]):
     try:
-        ssh("echo 'tst123456' > /home/k200/1239.txt","140.96.102.79", "k200", "k200user")
+        ssh("echo 'tst123456' > /home/k200/1239.txt","140.96.102.29", "k200", "k200user")
         """parser = argparse.ArgumentParser()
         parser.add_argument("yaml_cfg_file", type=argparse.FileType('r'))
         parser.add_argument("-q", "--quiet", dest="verbose", action="store_false")

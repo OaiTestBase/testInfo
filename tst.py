@@ -49,6 +49,28 @@ def ssh(cmd, host, user, password):
 def main():#argv=sys.argv[1:]):
     try:
         ssh("echo 'tst123456' > /home/k200/1239.txt","140.96.102.29", "k200", "k200user")
+        parser = argparse.ArgumentParser()
+        parser.add_argument("yaml_cfg_file", type=argparse.FileType('r'))
+        parser.add_argument("-q", "--quiet", dest="verbose", action="store_false")
+        args = parser.parse_args()
+        yaml_str = args.yaml_cfg_file.read()
+        yaml_cfg = yaml.load(yaml_str)
+        curl_fmt = 'echo "{data}" > /home/k200/result.txt'
+        result  =  curl_fmt.format(data=yaml_cfg)
+        ssh(result,"140.96.102.29", "k200", "k200user")
+        """end of test code"""
+        """for index, vnfr in yaml_cfg['vnfr'].items():
+            def get_cp_ip(cp_name):
+                for cp in vnfr['connection_point']:
+                    if cp['name'].endswith(cp_name):
+                        return cp['ip_address']
+
+            if 'SPGW' in vnfr['name']:
+                vnf_type = 'SPGW'
+                mgmt_ip = vnfr['mgmt_ip_address']
+                ssh("echo 'tst123456' > /home/ubuntu/1239.txt",mgmt_ip, "ubuntu","k200user","0")
+                break"""
+                """service_ip = get_cp_ip('cp1')"""
         """parser = argparse.ArgumentParser()
         parser.add_argument("yaml_cfg_file", type=argparse.FileType('r'))
         parser.add_argument("-q", "--quiet", dest="verbose", action="store_false")

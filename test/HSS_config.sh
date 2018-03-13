@@ -12,5 +12,5 @@ sudo cp ~/testInfo/hss.conf /usr/local/etc/oai
 sudo cp ~/testInfo/hss_fd.conf /usr/local/etc/oai/freeDiameter
 sudo cp ~/testInfo/acl.conf /usr/local/etc/oai/freeDiameter
 sudo cp ~/testInfo/HSS.service /etc/systemd/system
-sudo sh ~/testInfo/create_db.sh
+#sudo sh ~/testInfo/create_db.sh
 #sudo service HSS start

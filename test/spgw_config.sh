@@ -1,6 +1,10 @@
 #!/bin/bash
 #change host name
-sudo sed -i "s/ubuntu/$hostname/" /etc/hosts
+ORGHNAME=`cat /etc/hostname`
+sudo sed -i "s/ubuntu/$ORGHNAME/" /etc/hosts
+sudo sed -i "s/$ORGHNAME/spgw/" /etc/hosts
+sudo ed -i "s/$ORGHNAME/spgw/" /etc/hostname
+sudo hostname spgw
 
 #get interface for s11/s1
 #$1 --> public ip

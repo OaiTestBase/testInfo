@@ -67,6 +67,7 @@ def main():#argv=sys.argv[1:]):
                 curl_fmt = 'echo "{data}" > /home/k200/result2.txt'
                 result  =  curl_fmt.format(data=mgmt_ip)
                 ssh(result,mgmt_ip, "k200",'none')
+        output = subprocess.check_output(['bash','-c', "echo $PWD > ~/789exepath.txt"])
     except Exception as e:
         logger.exception("Exception in {}: {}".format(__file__, e))
 

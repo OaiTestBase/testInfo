@@ -39,16 +39,17 @@ sudo apt-get update
 sudo apt-get install -y nmap
 
 #start MME service
-#while :
-#do
-#    ResultForHss3868=`nmap -p 3868 $4 | grep open`
-#    ResultForHss5868=`nmap -p 5868 $4 | grep open`
-#    if [ "X$ResultForHss3868" = "X" ] || [ "X$ResultForHss5868" = "X" ]; then
-#        echo "wait for HSS"
-#    else
-#        echo "HSS is alread up"
-#        break
-#    fi
-#    sleep 1
+echo "wait for HSS" > ~/waiteinfo.txt
+while :
+do
+    ResultForHss3868=`nmap -p 3868 $4 | grep open`
+    ResultForHss5868=`nmap -p 5868 $4 | grep open`
+    if [ "X$ResultForHss3868" = "X" ] || [ "X$ResultForHss5868" = "X" ]; then
+        echo $4 >> ~/waiteinfo.txt
+    else
+        echo "HSS is alread up" > ~/success.txt
+        break
+    fi
+    sleep 1
 #done
-#sudo service MME start
+sudo service MME start

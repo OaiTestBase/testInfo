@@ -10,20 +10,20 @@ sudo hostname spgw
 #$1 --> public ip
 #$2 --> MME S11 ip
 #S3 --> spgw s11 ip
-S1Interface=`ifconfig | grep -B1 "inet addr:$1" | awk '$1!="inet" && $1!="--" {print $1}'`
-S11Interface=`ifconfig | grep -B1 "inet addr:$2" | awk '$1!="inet" && $1!="--" {print $1}'`
-echo $S1Interface > ~/result.txt
+SGiInterface=`ifconfig | grep -B1 "inet addr:$1" | awk '$1!="inet" && $1!="--" {print $1}'`
+S1_UInterface=`ifconfig | grep -B1 "inet addr:$1" | awk '$1!="inet" && $1!="--" {print $1}'`
+S11Interface=`ifconfig | grep -B1 "inet addr:$3" | awk '$1!="inet" && $1!="--" {print $1}'`
 
-#mod mme.conf
-#S1 ip on mme
-#sudo sed -i "s/__MME_S1_C_IP__/$1/" /opt/openbaton/scripts/OpenBaton/scripts/mme.conf
-#S1 interface on mme
-#sudo sed -i "s/__MME_S1_C_INTERFACE__/${S1Interface}/" /opt/openbaton/scripts/OpenBaton/scripts/mme.conf
+#config files
+sudo sed -i "s/__SPGW_SGi_INTERFACE__/${SGiInterface}/" ~/testInfo/test/spgw.conf
+sudo sed -i "s/__SPGW_S1U_IP__/$1/" ~/testInfo/test/spgw.conf
+sudo sed -i "s/__SPGW_S1U_INTERFACE__/${S1_UInterface}/" ~/testInfo/test/spgw.conf
+sudo sed -i "s/__SPGW_S11_IP__/$3/" ~/testInfo/test/spgw.conf
+sudo sed -i "s/__SPGW_S11_INTERFACE__/${S11Interface}/" ~/testInfo/test/spgw.conf
 
-#S11 ip on mme
-#sudo sed -i "s/__MME_S11_C_IP__/$2/" /opt/openbaton/scripts/OpenBaton/scripts/mme.conf
-#S11 interface on mme
-#sudo sed -i "s/__MME_S11_C_INTERFACE__/${S11Interface}/" /opt/openbaton/scripts/OpenBaton/scripts/mme.conf
- 
-#SPGW ip on spgw
-#sudo sed -i "s/SPGW_PRIVATE_IP/$3/" /opt/openbaton/scripts/OpenBaton/scripts/mme.conf
+#copy files
+sudo cp ~/testInfo/test/spgw.conf /usr/local/etc/oai
+sudo cp ~/testInfo/test/SPGW.service /etc/systemd/system
+
+#run spgw
+sudo service SPGW start

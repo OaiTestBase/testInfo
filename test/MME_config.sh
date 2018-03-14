@@ -51,5 +51,5 @@ do
         break
     fi
     sleep 1
-#done
+done
 sudo service MME start

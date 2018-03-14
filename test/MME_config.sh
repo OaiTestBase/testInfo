@@ -1,6 +1,10 @@
 #!/bin/bash
 #change host name
-sudo sed -i "s/ubuntu/$hostname/" /etc/hosts
+ORGHNAME=`cat /etc/hostname`
+sudo sed -i "s/ubuntu/$ORGHNAME/" /etc/hosts
+sudo sed -i "s/$ORGHNAME/nano/" /etc/hosts
+sudo sed -i "s/$ORGHNAME/nano/" /etc/hostname
+sudo hostname nano
 #$1 --> public
 #$2 --> S11
 #$3 --> spgw_S11
@@ -31,26 +35,20 @@ sudo cp ~/testInfo/test/mme.conf /usr/local/etc/oai
 sudo cp ~/testInfo/test/mme_fd.conf /usr/local/etc/oai/freeDiameter
 sudo cp ~/testInfo/test/MME.service /etc/systemd/system
 
-#change host name
-ORGHNAME=`cat /etc/hostname`
-sudo sed -i "s/$ORGHNAME/nano/" /etc/hosts
-sudo sed -i "s/$ORGHNAME/nano/" /etc/hostname
-sudo hostname nano
-
 sudo apt-get update 
 sudo apt-get install -y nmap
 
 #start MME service
-while :
-do
-    ResultForHss3868=`nmap -p 3868 $4 | grep open`
-    ResultForHss5868=`nmap -p 5868 $4 | grep open`
-    if [ "X$ResultForHss3868" = "X" ] || [ "X$ResultForHss5868" = "X" ]; then
-        echo "wait for HSS"
-    else
-        echo "HSS is alread up"
-        break
-    fi
-    sleep 1
-done
-sudo service MME start
+#while :
+#do
+#    ResultForHss3868=`nmap -p 3868 $4 | grep open`
+#    ResultForHss5868=`nmap -p 5868 $4 | grep open`
+#    if [ "X$ResultForHss3868" = "X" ] || [ "X$ResultForHss5868" = "X" ]; then
+#        echo "wait for HSS"
+#    else
+#        echo "HSS is alread up"
+#        break
+#    fi
+#    sleep 1
+#done
+#sudo service MME start
